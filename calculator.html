@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+
+        // var işaret = prompt('yapmak istediğiniz işlemi yazınız(toplama için + vb)');
+        // var sayi1 = parseInt(prompt('sayı1: '));
+        // var sayi2 = parseInt(prompt('sayı2: '));
+        // var Sonuc;
+        // if (işaret == '+') {Sonuc = sayi1 + sayi2}
+        // else if (işaret == '-') {Sonuc = sayi1 - sayi2}
+        // else if (işaret == '*') {Sonuc = sayi1 * sayi2}
+        // else { Sonuc = sayi1 / sayi2}
+        // document.write("Sonuç= " + Sonuc)
+
+        function x(xyz) {
+            document.getElementById("d").value = xyz;
+        }
+        function v(xyz) {
+            document.getElementById("d").value += xyz;
+        }
+        function y() {
+            x(eval(document.getElementById("d").value));
+        }
+
+
+    </script>
+
+    <style>
+        body {
+            background-image: url("../stproj1/stproj1/page/indir.jpg");
+            font-family: Verdana, monospace, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: justify;
+            min-height: 800px;
+        }
+
+
+        #hes {
+            width: 300px;
+            height: 500px;
+            padding: 20px;
+            background-color: rgb(106, 54, 2);
+            border-radius: 10px 10px 10px 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -200px;
+            margin-top: -150px;
+        }
+
+        .ekran input {
+            position: relative;
+            left: 2px;
+            top: 2px;
+            height: 45px;
+            color: black;
+            background-color: rgb(223, 161, 138);
+            font-size: 21px;
+            text-align: right;
+        }
+
+        .keys {
+            position: relative;
+            top: 15px;
+        }
+
+        .button {
+            width: 40px;
+            height: 30px;
+            border: none;
+            border-radius: 8px;
+            margin-left: 17px;
+            cursor: pointer;
+            border-top: 2px solid transparent;
+            background-color: rgb(202, 102, 65);
+            color: brown;
+        }
+
+
+        .button:active {
+            border-top: black 2px solid;
+            border-bottom: FF9933 2px solid;
+        }
+
+
+        p {
+            line-height: 10px;
+        }
+
+        #tik {
+            margin-left: 10%;
+            color: rgb(67, 19, 2);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="hes">
+
+
+        <div class="ekran">
+            <input id="d" type="text" readonly size="20">
+        </div>
+
+
+        <div class="keys">
+
+            <p>
+                <input type="button" class="button " value="7" onclick='v("7")'>
+                <input type="button" class="button " value="8" onclick='v("8")'>
+                <input type="button" class="button " value="9" onclick='v("9")'>
+                <input type="button" class="button " value="*" onclick='v("*")'>
+
+            </p>
+            <p>
+                <input type="button" class="button " value="4" onclick='v("4")'>
+                <input type="button" class="button " value="5" onclick='v("5")'>
+                <input type="button" class="button " value="6" onclick='v("6")'>
+                <input type="button" class="button " value="/" onclick='v("/")'>
+
+            </p>
+            <p>
+                <input type="button" class="button" value="1" onclick='v("1")'>
+                <input type="button" class="button" value="2" onclick='v("2")'>
+                <input type="button" class="button" value="3" onclick='v("3")'>
+                <input type="button" class="button" value="+" onclick='v("+")'>
+            </p>
+            <p>
+                <input type="button" class="button" value="0" onclick='v("0")'>
+                <!-- <input type="button" class="button" value="." onclick='v(".")'> -->
+                <input type="button" class="button" value="SİL" onclick='x("")'>
+                <input type="button" class="button" value="=" onclick='y()'>
+                <input type="button" class="button" value="-" onclick='v("-")'>
+
+            </p>
+
+            <p id="tik"> İşin Bitince Tıkla
+                <button class="button" onclick="alert('Hesap Makinesi için bu kadar uğraştırılır mı????');">🖐</button>
+            </p>
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>
